@@ -1,0 +1,257 @@
+/* Resetting default margin, padding, and box-sizing for all elements */
+
+* {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Use border-box box-sizing model for all elements */
+}
+
+/* Styling for elements with class "category" */
+
+.category {
+  margin-bottom: 16px; /* Add bottom margin of 16 pixels to elements with class "category" */
+}
+
+/* Styling for elements with class "hidden" */
+
+.hidden {
+  display: none !important; /* Hide elements with class "hidden" and override any existing styles with the use of !important */
+}
+
+.btn {
+  border: none;
+  font-family: "Coiny", "Arial";
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding: 16px 0 13px;
+  background-image: linear-gradient(
+    135deg,
+    #3b82f6,
+    #16a34a,
+    #db2777,
+    #14b8a6,
+    #8b5cf6
+  );
+  color: inherit;
+  transition: 0.3s;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(110%) rotate(-2deg);
+}
+
+.btn-large {
+  padding: 20px 32px 17px;
+}
+
+.btn-all-category {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.btn-category {
+  width: 100%;
+  background-image: none;
+}
+
+.source:link,
+.source:visited {
+  color: purple;
+  text-decoration: none;
+  margin-left: 10px;
+  transition: 1s;
+}
+
+.source:hove,
+.source:active {
+  color: green;
+}
+
+.logo img {
+  width: 68px;
+  height: 68px;
+}
+
+#root {
+  max-width: 10000px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: rgb(44, 40, 34);
+  color: white;
+  font-family: "Sono", "Arial";
+  padding: 48px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 48px;
+}
+
+.fact-form {
+  background-color: rgb(136, 121, 98);
+  margin-bottom: 40px;
+  padding: 16px 32px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 16px;
+}
+
+.fact-form input,
+.fact-form select {
+  width: 250px;
+  border: none;
+  background-color: rgba(44, 40, 34, 0.766);
+  border-radius: 100px;
+  padding: 20px;
+  font-size: 18px;
+  color: inherit;
+  font-family: inherit;
+}
+
+.fact-form span {
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 18px;
+}
+
+.fact-form input::placeholder {
+  color: rgb(150, 147, 147);
+}
+
+.fact-form input:first-child {
+  flex-grow: 1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 42px;
+  text-transform: uppercase;
+  font-family: "Coiny", "Arial";
+  color: rgb(255, 255, 255);
+  line-height: 1;
+  margin-top: 5px;
+}
+
+.vote-buttons {
+  margin-left: auto;
+  display: flex;
+  flex-shrink: 0;
+  gap: 16px;
+}
+
+.vote-buttons button {
+  border: none;
+  background-color: rgba(44, 40, 34, 0.766);
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.vote-buttons button:hover {
+  transform: scale(110%);
+  background-color: rgb(44, 40, 34);
+}
+
+.fact {
+  font-size: 20px;
+  line-height: 1.4;
+  color: rgb(255, 255, 255);
+  background-color: rgb(136, 121, 98);
+  margin-bottom: 16px;
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-radius: 16px;
+}
+
+.tag {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Coiny", "Arial";
+  color: rgb(255, 255, 255);
+  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+@media (max-width: 1200px) {
+  body {
+    padding: 32px 8px;
+  }
+
+  .fact {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+  }
+  .fact-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fact-form input,
+  .fact-form select {
+    width: auto;
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: 24px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .fact-form {
+    padding: 16px;
+  }
+
+  .fact {
+    padding: 12px 16px;
+  }
+}
